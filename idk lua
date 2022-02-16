@@ -80,7 +80,7 @@ if k == '1' then-- first mode
 Mode='1'
 elseif k == '2' then-- second mode
 Mode='2'
-elseif k == 'urkeybind' then-- third mode
+elseif k == '3' then-- third mode
 Mode='3'
 end
 end)
@@ -163,7 +163,13 @@ if Root.Velocity.y > 1 then -- jump
 elseif Root.Velocity.y < -1 then -- fall
 --fall clerp here
 elseif Root.Velocity.Magnitude < 2 then -- idle
---idle clerp here
+--idle clerp hereNECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+hatset('Backuette','Torso',CFrame.new(),reanim['Backuette'].Handle.AccessoryWeld.C0:Lerp(CF(2+0.3*math.cos(sine/5),1+0.1*math.cos(sine/5),0+0*math.cos(sine/5))*ANGLES(RAD(-4+0*math.cos(sine/5)),RAD(92+0*math.cos(sine/5)),RAD(3+0*math.cos(sine/5))),1),false)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.sin(sine/8),0+0.3*math.sin(sine/8),0+0.1*math.sin(sine/8))*ANGLES(RAD(1+3*math.cos(sine/8)),RAD(0+0*math.cos(sine/8)),RAD(0+0*math.cos(sine/8))),.3)
+RS.C0 = RS.C0:Lerp(CF(1+0*math.cos(sine/13),0+0*math.cos(sine/13),-0.6+0.2*math.cos(sine/13))*ANGLES(RAD(-307+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-51+0*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1+0*math.cos(sine/13),0.+0*math.cos(sine/13),-0.6+0.2*math.cos(sine/13))*ANGLES(RAD(-307+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(51+0*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(-6+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(96+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-89+0*math.cos(sine/13))),.3)
 elseif Root.Velocity.Magnitude < 20 then -- walk
 --walk clerp here
 elseif Root.Velocity.Magnitude > 20 then -- run
